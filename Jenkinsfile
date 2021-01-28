@@ -1,14 +1,11 @@
-peline {
-   agent any
+node {
+cleanWs()
 
-   stages {
-      stage('Build') {
-         steps {
-            
-            bat 'mvn clean'
-            bat 'mvn install'
-         }
-      }
+def mvnHome
+   stage('mvn') { 
       
+      bat 'mvn clean'
    }
 }
+      
+      
